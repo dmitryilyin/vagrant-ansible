@@ -1,0 +1,15 @@
+---
+
+- name: 'Add public key'
+  authorized_key:
+    user: root
+    state: present
+    key: "{{ lookup('file', '/vagrant/provisioning/keys/id_rsa.pub') }}"
+
+- name: 'Add a private key'
+  copy:
+    dest: '/root/.ssh/id_rsa'
+    owner: 'root'
+    group: 'root'
+    mode: '0700'
+    content: "{{ lookup('file', '/vagrant/provisioning/keys/id_rsa') }}"

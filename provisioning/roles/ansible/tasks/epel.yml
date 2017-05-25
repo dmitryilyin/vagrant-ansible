@@ -1,0 +1,5 @@
+---
+- name: "Install the EPEL repository"
+  yum:
+    name: "{{ epel_package_url }}"
+    state: "present"

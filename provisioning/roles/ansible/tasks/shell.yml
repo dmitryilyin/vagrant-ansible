@@ -1,0 +1,6 @@
+---
+
+- name: 'Set shell colors'
+  template:
+    src: 'colorcmd.sh.j2'
+    dest: '/etc/profile.d/colorcmd.sh'

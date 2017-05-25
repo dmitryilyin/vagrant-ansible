@@ -1,0 +1,5 @@
+PS1_SMILE='`if [[ "${?}" = "0" ]]; then echo -e "\[\033[33m\]^_^\[\e[0m\]"; else echo -e "\[\033[31m\]o_O\[\e[0m\]"; fi`'
+PS1_GIT='`type -t "__git_ps1" 1>/dev/null 2>/dev/null && __git_ps1`'
+PS1_SU='`if [[ "${EUID}" == "0" ]]; then echo -e "\[\033[01;31m\]\H\[\033[01;34m\] \W \$\[\033[00m\]"; else echo -e "\[\033[01;32m\]\u@\H\[\033[01;34m\] \w \$\[\033[00m\]"; fi`'
+PS1_TIME='`ec=$?; date "+\[\033[01;32m\]%H:%M:%S\[\033[00m\]"; exit $ec`'
+PS1="${PS1_TIME} ${PS1_SMILE}${PS1_GIT} ${PS1_SU} "

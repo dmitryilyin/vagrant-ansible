@@ -1,0 +1,6 @@
+---
+
+- include: 'epel.yml'
+- include: 'install.yml'
+- include: 'access.yml'
+- include: 'shell.yml'

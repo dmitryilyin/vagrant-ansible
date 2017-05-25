@@ -1,0 +1,10 @@
+---
+- name: Install the Ansible hosts
+  hosts: all
+  connection: local
+  become: true
+  become_method: sudo
+  become_user: root
+
+  roles:
+    - ansible
